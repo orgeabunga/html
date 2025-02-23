@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo Mohan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        body {
+            font-family: 'Great Vibes', cursive;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .greeting {
+            font-size: 3rem;
+            color: linear-gradient(45deg, #ff69b4, #00bfff, #ff4500);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            animation: shake 1.5s ease-in-out infinite;
+        }
+
+        .button button {
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0px 4px 6px rgba(255, 105, 180, 0.5);
+        }
+
+        .button button:hover {
+            background-color: #ff85c1;
+            transform: scale(1.1);
+        }
+
+        .message {
+            font-size: 2.5rem;
+            color: #00bfff;
+            margin-top: 20px;
+            display: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .decor {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: radial-gradient(circle, #ff69b4, transparent);
+            border-radius: 50%;
+            animation: move 10s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-5px);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+            75% {
+                transform: translateX(-5px);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(100px, -100px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .decor:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .decor:nth-child(2) {
+            top: 30%;
+            left: 60%;
+            animation-delay: 2s;
+        }
+
+        .decor:nth-child(3) {
+            top: 50%;
+            left: 40%;
+            animation-delay: 4s;
+        }
+
+        .decor:nth-child(4) {
+            top: 70%;
+            left: 80%;
+            animation-delay: 6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting">haloo mohan, ini geaa</div>
+    <div class="button">
+        <button onclick="showMessage()">Klik di sini</button>
+    </div>
+    <div class="message" id="message">have a nice day yaaa!</div>
+
+    <div class="decor"></div>
+    <div class="decor"></div>
+    <div class="decor"></div>
+    <div class="decor"></div>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
